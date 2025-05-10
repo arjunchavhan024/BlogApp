@@ -1,5 +1,3 @@
-# BlogApp
-New Web
 # 🌟 Mini Blog Application
 
 A simple full-stack blog platform where users can register, log in, and perform CRUD operations on blog posts. It also features a public feed and a private user dashboard.
