@@ -30,7 +30,7 @@ const Contact = () => {
         <Text variant="h5">
           Reach out to me on
           <Link
-            href="https://www.instagram.com/codeforinterview/"
+            href="https://www.instagram.com/arjunchavhan024/"
             color="inherit"
             target="_blank"
           >
@@ -38,7 +38,7 @@ const Contact = () => {
           </Link>
           or send me an Email
           <Link
-            href="mailto:codeforinterview@gmail.com?Subject=This is a subject"
+            href="arjunchavhan024@gmail.com?Subject=This is a subject"
             target="_blank"
             color="inherit"
           >

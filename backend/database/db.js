@@ -1,14 +1,20 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-const Connection = async (username, password) => {
-  const URL = `mongodb+srv://${username}:${password}@blogweb-shard-00-00.ch1hk.mongodb.net,blogweb-shard-00-01.ch1hk.mongodb.net,blogweb-shard-00-02.ch1hk.mongodb.net/BLOG?retryWrites=true&w=majority`;
+dotenv.config();
+
+const Connection = async () => {
+  const username = process.env.DB_USERNAME;
+  const password = process.env.DB_PASSWORD;
+  const dbName = process.env.DB_NAME || "BLOG";
+
+  const URL = `mongodb+srv://${username}:${password}@cluster0.xaxvyzw.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=Cluster0`;
 
   try {
-    // No need to include useNewUrlParser or useUnifiedTopology anymore
     await mongoose.connect(URL, { bufferCommands: false });
-    console.log("Database connected successfully");
+    console.log(" Database connected successfully");
   } catch (error) {
-    console.log("Error while connecting to the database ", error);
+    console.log(" Failed to connect to the database:", error);
   }
 };
 
